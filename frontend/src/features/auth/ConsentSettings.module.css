@@ -1,0 +1,11 @@
+.settings { display:grid; gap:14px; min-width:0; }
+.settings h2, .settings h3 { margin:0; }
+.settings p { line-height:1.5; overflow-wrap:anywhere; }
+.document { padding:14px; border:1px solid var(--border); border-radius:12px; background:var(--surface); display:grid; gap:10px; }
+.document small { color:var(--text-muted); }
+.text { white-space:pre-wrap; }
+.document summary { cursor:pointer; padding:10px 0; color:var(--purple-light); }
+.settings button { min-height:44px; padding:10px; border-radius:9px; border:1px solid #6423a0; background:#241033; color:#efdfff; }
+.check { display:flex; gap:10px; align-items:center; min-height:44px; line-height:1.4; }
+.check input { width:20px; height:20px; flex:0 0 20px; accent-color:#8b2cda; }
+.settings a { color:var(--purple-light); }

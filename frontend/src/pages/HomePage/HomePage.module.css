@@ -1,0 +1,318 @@
+.page {
+    padding: 18px 16px 26px;
+    display: grid;
+    gap: 12px;
+}
+
+.workoutCardTop { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.mobilityBadge { flex: none; border: 1px solid #9858d8; border-radius: 999px; background: #271235; color: #edceff; padding: 5px 9px; font-size: .72rem; font-weight: 800; animation: mobilityGlow 2.5s ease-in-out infinite; }
+@keyframes mobilityGlow { 50% { box-shadow: 0 0 0 4px rgb(162 72 230 / 14%); border-color: #d38cff; } }
+@media (prefers-reduced-motion: reduce) { .mobilityBadge { animation: none; } }
+
+.header,
+.brand,
+.greeting,
+.workoutHero,
+.weekHead,
+.whatsapp {
+    display: flex;
+    align-items: center;
+}
+
+.header {
+    justify-content: space-between;
+}
+
+.brand {
+    gap: 9px;
+}
+
+.brand img {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+.brand strong,
+.brand span {
+    display: block;
+}
+
+.brand strong {
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.brand span {
+    font-size: .75rem;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-top: 4px;
+    letter-spacing: .08em;
+}
+
+.greeting {
+    justify-content: space-between;
+    padding: 8px 0 2px;
+}
+
+.greeting h1 {
+    font-size: 1rem;
+    margin: 0 0 5px;
+}
+
+.greeting h1 span {
+    font-size: 1rem;
+}
+
+.greeting p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: .875rem;
+}
+
+.profileShortcut {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    border: 2px solid var(--purple);
+    padding: 0;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    background: #29103f;
+    color: var(--purple-light);
+    font-weight: 800;
+}
+
+.profileShortcut img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.notificationControl {
+    position: relative;
+}
+
+.notificationControl > button {
+    position: relative;
+}
+
+.notificationBadge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    display: grid;
+    place-items: center;
+    min-width: 17px;
+    height: 17px;
+    padding: 0 4px;
+    border: 2px solid var(--background);
+    border-radius: 999px;
+    background: var(--purple);
+    color: white;
+    font-size: .75rem;
+    line-height: 1;
+}
+
+.notificationPanel {
+    position: absolute;
+    z-index: 10;
+    top: calc(100% + 8px);
+    right: 0;
+    width: min(290px, calc(100vw - 32px));
+    padding: 12px;
+    border: 1px solid #6423a0;
+    border-radius: 12px;
+    background: #16101d;
+    box-shadow: 0 16px 35px rgb(0 0 0 / 45%);
+}
+
+.notificationTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.notificationTitle strong {
+    font-size: .875rem;
+}
+
+.notificationTitle button {
+    border: 0;
+    background: transparent;
+    color: var(--purple-light);
+    font-size: .75rem;
+}
+
+.notificationPanel .notificationItem {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 0;
+    color: var(--text);
+    text-align: left;
+    border: 0;
+    border-top: 1px solid rgb(255 255 255 / 8%);
+    background: transparent;
+}
+
+.notificationPanel .notificationItem span {
+    flex: 1;
+    font-size: .75rem;
+    line-height: 1.4;
+}
+
+.notificationPanel .notificationItem svg:first-child {
+    color: var(--purple-light);
+}
+
+.notificationPanel p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: .75rem;
+}
+
+.workoutCard {
+    border: 1px solid #4b167b;
+    border-radius: var(--radius-lg);
+    padding: 14px;
+    background: radial-gradient(circle at 85% 30%, rgb(109 23 199 / 28%), transparent 35%), var(--surface);
+}
+
+.workoutHero {
+    justify-content: space-between;
+    margin: 7px 0 14px;
+}
+
+.workoutHero h2 {
+    font-size: 1.35rem;
+    margin: 0;
+}
+
+.workoutHero strong,
+.workoutHero span {
+    display: block;
+}
+
+.workoutHero strong {
+    color: var(--purple-light);
+    font-size: .875rem;
+    margin-top: 3px;
+}
+
+.workoutHero span {
+    color: var(--text-muted);
+    font-size: .75rem;
+    margin-top: 10px;
+}
+
+.dumbbell {
+    width: 82px;
+    height: 82px;
+    color: #8d34dd;
+    opacity: .32;
+    stroke-width: .6;
+}
+
+.weekHead {
+    justify-content: space-between;
+    color: var(--purple-light);
+}
+
+.weekHead span,
+.weekHead strong {
+    display: block;
+}
+
+.weekHead span {
+    color: var(--text-muted);
+    font-size: .75rem;
+}
+
+.weekHead strong {
+    color: var(--text);
+    font-size: .875rem;
+    margin: 4px 0 10px;
+}
+
+.percent {
+    display: block;
+    text-align: right;
+    color: var(--text-muted);
+    margin-top: 6px;
+}
+
+.shortcuts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.shortcuts button {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    text-align: left;
+    color: var(--purple-light);
+    min-height: 76px;
+}
+
+.shortcuts strong,
+.shortcuts small {
+    display: block;
+}
+
+.shortcuts strong {
+    color: var(--text);
+    font-size: .875rem;
+    margin-bottom: 5px;
+}
+
+.shortcuts small {
+    color: var(--text-muted);
+    font-size: .75rem;
+    line-height: 1.35;
+}
+
+.whatsapp {
+    width: 100%;
+    color: var(--text);
+    text-align: left;
+    gap: 10px;
+}
+
+.whatsapp>span:nth-child(2) {
+    flex: 1;
+}
+
+.whatsapp strong,
+.whatsapp small {
+    display: block;
+}
+
+.whatsapp strong {
+    font-size: .875rem;
+}
+
+.whatsapp small {
+    color: var(--text-muted);
+    font-size: .75rem;
+    margin-top: 3px;
+}
+
+.whatsappIcon {
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--purple);
+}
+.whatsapp{text-decoration:none}.error{margin:0;padding:10px;border:1px solid #72313b;border-radius:9px;background:#281116;color:#ffadb7}.liveSummary{display:grid;grid-template-columns:1fr 1fr;gap:8px}.liveSummary article{display:flex;gap:9px;align-items:flex-start}.liveSummary svg{color:var(--purple-light);flex:0 0 auto}.liveSummary span{min-width:0;display:grid;gap:4px}.liveSummary strong,.liveSummary small,.liveSummary b{overflow-wrap:anywhere}.liveSummary strong{font-size: .75rem}.liveSummary small{font-size: .75rem;color:var(--text-muted)}.liveSummary b{font-size: .75rem;color:var(--purple-light)}@media(max-width:380px){.liveSummary{grid-template-columns:1fr}}
+.updates{display:flex;gap:9px;padding:11px;border:1px solid #6423a0;border-radius:10px;background:#251033}.updates svg{color:var(--purple-light);flex:0 0 auto}.updates div{display:grid;gap:4px}.updates strong{font-size: .75rem}.updates small{color:#dcbaff;font-size: .75rem}

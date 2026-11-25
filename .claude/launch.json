@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "remotion-vera-cruz",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "C:\\Users\\ricar\\Videos\\videos\\motion-vera-cruz", "run", "studio", "--", "--port", "3123", "--no-open"],
+      "port": 3123
+    }
+  ]
+}

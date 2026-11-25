@@ -1,0 +1,33 @@
+.panel { min-width: 0; container-type: inline-size; padding: 18px; border: 1px solid #262a30; border-radius: 17px; background: #0f1215; color: #f7f7fb; }
+.heading h2 { margin: 0 0 4px; font-size: 1.05rem; }
+.heading p { margin: 0; color: var(--text-muted); font-size: .8rem; }
+.counts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: 15px; }
+.counts button { min-width: 0; min-height: 76px; padding: 12px; border: 1px solid var(--border); border-radius: 11px; background: #0b0d10; color: #f7f7fb; text-align: left; display: grid; align-content: center; gap: 3px; cursor: pointer; }
+.counts button:hover, .counts button[aria-expanded="true"] { border-color: #8a3dc0; background: #21102c; }
+.counts strong { font-size: 1.45rem; line-height: 1; }
+.counts span { color: var(--text-muted); font-size: .78rem; }
+.counts button[data-status="pending"] strong { color: #ffb978; }
+.counts button[data-status="submitted"] strong { color: var(--green); }
+.expanded { min-width: 0; margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--border); animation: feedback-list-in .28s ease-out; }
+/* Só a lista aparece animada; o painel muda de tamanho na hora, sem esticar nem sobrepor outros quadros. */
+@keyframes feedback-list-in { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .expanded { animation: none; } }
+.expanded h3 { margin: 0; font-size: .92rem; }
+.message { margin: 12px 0 0; color: #dcbaff; font-size: .8rem; }
+.list { display: grid; gap: 8px; max-height: 380px; margin-top: 12px; overflow-y: auto; }
+.row { min-width: 0; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 8px; padding: 11px; border: 1px solid var(--border); border-radius: 11px; background: #0b0d10; }
+.identity { min-width: 0; display: grid; gap: 3px; }
+.identity strong, .identity small { overflow-wrap: anywhere; }
+.identity small, .date { color: var(--text-muted); font-size: .75rem; }
+.status { padding: 5px 8px; border: 1px solid #704126; border-radius: 999px; color: #ffb978; font-size: .7rem; white-space: nowrap; }
+.status[data-status="submitted"] { border-color: #286243; color: var(--green); }
+.actions, .date, .view { grid-column: 1 / -1; }
+.actions button, .view, .pagination button { min-height: 40px; padding: 8px 11px; border: 1px solid #6423a0; border-radius: 9px; background: #241033; color: #efdfff; }
+.actions button, .view { width: 100%; }
+.actions button:disabled { opacity: .6; }
+.view { border-color: var(--border); background: #16191d; }
+.empty { padding: 14px; color: var(--text-muted); font-size: .8rem; text-align: center; }
+.pagination { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 8px; margin-top: 14px; color: var(--text-muted); font-size: .8rem; }
+/* Linhas em uma só faixa apenas quando o próprio painel é largo (na coluna lateral ficam empilhadas). */
+@container (min-width: 620px) { .panel[data-expanded="true"] .row { grid-template-columns: minmax(0, 1fr) auto minmax(0, auto) auto; } .panel[data-expanded="true"] .actions, .panel[data-expanded="true"] .date, .panel[data-expanded="true"] .view { grid-column: auto; } .panel[data-expanded="true"] .actions button, .panel[data-expanded="true"] .view { width: auto; } }
+@media (max-width: 700px) { .panel { padding: 14px; } }

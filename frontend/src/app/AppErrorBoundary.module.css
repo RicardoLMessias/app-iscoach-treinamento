@@ -1,0 +1,7 @@
+.page { min-height: 100dvh; padding: 20px; display: grid; place-items: center; background: radial-gradient(circle at 50% 10%, #251033 0, #090b0d 38%); }
+.card { width: min(100%, 430px); padding: 28px 22px; display: grid; gap: 12px; color: var(--text); background: #0f1215; border: 1px solid #54206f; border-radius: 20px; box-shadow: 0 24px 70px rgb(0 0 0 / 50%); }
+.card h1, .card p { margin: 0; }
+.card h1 { font-size: 1.35rem; }
+.card p:not(.eyebrow) { color: var(--text-muted); font-size: .875rem; line-height: 1.55; }
+.mark { width: 42px; height: 42px; display: grid; place-items: center; color: white; background: linear-gradient(135deg, #6512bd, #a039f0); border-radius: 11px; font-weight: 900; font-style: italic; }
+.card button { margin-top: 6px; }

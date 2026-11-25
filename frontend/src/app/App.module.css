@@ -1,0 +1,9 @@
+.shell { width: min(100%, 430px); min-height: 100dvh; margin: 0 auto; background: var(--background); position: relative; padding-bottom: calc(66px + env(safe-area-inset-bottom)); border-inline: 1px solid var(--border-subtle); }
+.navigation { position: fixed; z-index: 20; bottom: 0; left: 50%; transform: translateX(-50%); width: min(100%, 430px); min-height: 64px; padding: 8px 6px max(7px, env(safe-area-inset-bottom)); background: rgb(9 11 13 / 94%); backdrop-filter: blur(18px); border-top: 1px solid var(--border); display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); }
+.navigation button { border: 0; background: transparent; color: #6f737b; display: grid; justify-items: center; gap: 4px; font-size: .75rem; cursor: pointer; }
+.navigation button.active { color: var(--purple-light); }
+
+@media (min-width: 700px) {
+  .shell { margin-block: 24px; min-height: calc(100dvh - 48px); border: 1px solid var(--border); border-radius: 30px; overflow: hidden; box-shadow: 0 24px 80px rgb(0 0 0 / 45%); }
+  .navigation { bottom: 24px; border-radius: 0 0 30px 30px; }
+}

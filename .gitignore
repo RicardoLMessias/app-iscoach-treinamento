@@ -1,0 +1,13 @@
+node_modules/
+frontend/node_modules/
+frontend/dist/
+backend/.env
+backend/storage/logs/*.log
+backend/storage/cache/*
+.tools/
+!.gitkeep
+releases/
+**/*.sqlite
+**/*.sqlite-*
+**/.env
+**/.env.backup

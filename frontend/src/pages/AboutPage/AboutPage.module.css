@@ -1,0 +1,21 @@
+.page { padding: 18px 16px 32px; display: grid; gap: 18px; }
+.page > header { margin: -18px -16px 0; }
+.hero, .guide, .install, .developer { min-width: 0; padding: 20px; border: 1px solid var(--border); border-radius: 18px; background: var(--surface); }
+.hero { background: linear-gradient(145deg, #21102e, #101216 70%); border-color: #4f276a; }
+.mark { width: 44px; height: 44px; margin-bottom: 16px; display: grid; place-items: center; border-radius: 12px; background: linear-gradient(135deg, #6512bd, #952de8); color: #fff; font-weight: 900; font-style: italic; }
+.hero h1 { margin: 8px 0; font-size: 1.65rem; }
+.hero > p:not(.eyebrow), .developer > p:not(.eyebrow) { margin: 0; color: var(--text-muted); line-height: 1.55; }
+.hero > small { display: block; margin-top: 14px; color: var(--text-muted); }
+.guide h2, .install h2, .developer h2 { margin: 0 0 14px; font-size: 1.2rem; }
+.install > p:first-child { margin: 0 0 8px; }
+.install > p:not(.eyebrow) { margin: 0 0 18px; color: var(--text-muted); line-height: 1.55; }
+.featureList { display: grid; gap: 10px; }
+.featureList article { min-width: 0; padding: 12px; border: 1px solid var(--border); border-radius: 12px; background: #0b0d10; display: flex; align-items: flex-start; gap: 12px; }
+.featureIcon { width: 36px; height: 36px; flex: 0 0 auto; border-radius: 10px; background: #291238; color: var(--purple-light); display: grid; place-items: center; }
+.featureList article > div { min-width: 0; }
+.featureList h3 { margin: 0 0 4px; font-size: .95rem; }
+.featureList p { margin: 0; color: var(--text-muted); font-size: .85rem; line-height: 1.5; }
+.developer { border-color: #4f276a; }
+.developer > p:first-child { margin-bottom: 8px; }
+.developer a { width: fit-content; min-height: 44px; margin-top: 16px; padding: 10px 15px; border-radius: 9px; background: linear-gradient(100deg, #6512bd, #952de8); color: #fff; font-size: .85rem; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
+@media (max-width: 380px) { .hero, .guide, .install, .developer { padding: 16px; } }

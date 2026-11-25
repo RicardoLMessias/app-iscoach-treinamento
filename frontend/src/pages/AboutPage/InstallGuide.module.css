@@ -1,0 +1,11 @@
+.guide { display: grid; gap: 14px; }
+.platforms { display: flex; gap: 8px; }
+.platforms button { min-height: 42px; padding: 8px 16px; border: 1px solid var(--border); border-radius: 9px; background: #0b0d10; color: var(--text-muted); font-weight: 700; }
+.platforms button[aria-pressed="true"] { border-color: var(--purple-light); background: #2a1039; color: #fff; }
+.guide ol { margin: 0; padding-left: 23px; display: grid; gap: 10px; }
+.guide li { padding-left: 3px; line-height: 1.5; }
+.guide li::marker { color: var(--purple-light); font-weight: 800; }
+.guide > p { margin: 0; color: var(--text-muted); font-size: .85rem; line-height: 1.5; }
+.compact { gap: 10px; }
+.compact ol { gap: 7px; }
+.compact li { font-size: .85rem; }

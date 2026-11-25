@@ -1,0 +1,124 @@
+.trigger { min-height: 42px; padding: 9px 12px; border: 1px solid #70409b; border-radius: 9px; background: #29143b; color: #f1ddff; display: inline-flex; align-items: center; justify-content: center; gap: 7px; }
+.trigger:disabled { cursor: not-allowed; opacity: .5; }
+.portal { position: fixed; inset: 0; z-index: 9999; overflow: auto; padding: 76px 20px 32px; background: rgba(4, 5, 7, .92); color: #15121a; }
+.toolbar { position: fixed; inset: 0 0 auto; z-index: 2; min-height: 62px; padding: 10px max(18px, calc((100vw - 900px) / 2)); background: #0d0f12; border-bottom: 1px solid #34383f; color: white; display: flex; align-items: center; gap: 10px; }
+.toolbar div { margin-right: auto; display: grid; gap: 2px; }.toolbar span { color: #aeb3bd; font-size: .8rem; }
+.toolbar button { min-height: 42px; padding: 8px 12px; border: 1px solid #70409b; border-radius: 8px; background: #6320a0; color: white; display: inline-flex; align-items: center; gap: 6px; }
+.sheet { width: min(210mm, 100%); min-height: 297mm; margin: 0 auto; padding: 12mm; background: white; box-shadow: 0 18px 60px rgba(0,0,0,.45); font-family: Arial, Helvetica, sans-serif; font-size: 10pt; line-height: 1.35; }
+.header { margin-bottom: 8mm; display: grid; grid-template-columns: 20mm auto 1fr; align-items: center; gap: 4mm; color: #3e075f; }
+.logo { width: 18mm; height: 18mm; display: block; object-fit: contain; border-radius: 1.5mm; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+.header > div:nth-child(2) { display: grid; line-height: 1; }.header > div:nth-child(2) strong { font-size: 20pt; }.header > div:nth-child(2) span { margin-top: 2mm; font-size: 9pt; letter-spacing: .18em; text-transform: uppercase; }
+.header section { text-align: right; }.header h1 { margin: 0; font-size: 18pt; text-transform: uppercase; }.header p { margin: 2mm 0 0; color: #555; }
+.info { margin: 0 0 6mm; padding: 3mm; border: 1.2px solid #17131a; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 2mm; }
+.info div { min-width: 0; padding: 2mm; border: 1px solid #777; }.info dt { margin-bottom: 1mm; color: #5f5366; font-size: 7.5pt; }.info dd { margin: 0; font-weight: 700; overflow-wrap: anywhere; }
+.section { margin: 0 0 6mm; break-inside: auto; }.section > h2 { margin: 0 0 2mm; padding: 2.4mm 3mm; background: #6e3a91; color: white; font-size: 11pt; text-align: center; text-transform: uppercase; break-after: avoid; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+.tableWrap { width: 100%; overflow: hidden; }
+.sheet table { width: 100%; border-collapse: collapse; table-layout: fixed; } .sheet thead { display: table-header-group; } .sheet tr { break-inside: avoid; } .sheet th, .sheet td { padding: 2.2mm; border: 1px solid #242024; vertical-align: top; overflow-wrap: anywhere; } .sheet th { background: #eee8f2; font-size: 8pt; print-color-adjust: exact; -webkit-print-color-adjust: exact; } .sheet td { font-size: 8.5pt; } .sheet td a { color: #4f1182; font-weight: 700; }
+.compact th, .compact td { padding: 1.6mm; font-size: 7.5pt; }
+.summary { margin: 0 0 5mm; display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid #242024; }.summary div { padding: 3mm; text-align: center; }.summary div + div { border-left: 1px solid #242024; }.summary strong { display: block; color: #5f168f; font-size: 14pt; }.summary small { color: #5b5360; }
+.notes { margin: 2mm 0 0; padding: 3mm; border: 1px solid #242024; white-space: pre-wrap; }.subheading { margin: 3mm 0 1.5mm; color: #4e176d; font-size: 10pt; break-after: avoid; }.muted { color: #625a66; }.photoGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 3mm; }.photoGrid figure { margin: 0; padding: 2mm; border: 1px solid #242024; break-inside: avoid; }.photoGrid img { width: 100%; max-height: 88mm; object-fit: contain; background: #eee; }.photoGrid figcaption { margin-top: 1mm; text-align: center; font-size: 8pt; }.comparisonGrid { display: grid; grid-template-columns: 1.2fr 1fr 1fr .8fr; }.comparisonGrid > * { padding: 2mm; border: 1px solid #242024; }.comparisonGrid strong { background: #eee8f2; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+.footer { margin-top: 8mm; padding-top: 2mm; border-top: 1px solid #aaa; color: #666; font-size: 7.5pt; text-align: center; }
+
+@font-face { font-family: "IS Coach DejaVu"; src: url("/fonts/dejavu/DejaVuSans.ttf") format("truetype"); font-style: normal; font-weight: 400; font-display: swap; }
+@font-face { font-family: "IS Coach DejaVu"; src: url("/fonts/dejavu/DejaVuSans-Bold.ttf") format("truetype"); font-style: normal; font-weight: 700; font-display: swap; }
+.assessmentSheet { width: min(210mm, 100%); padding: 0; background: transparent; box-shadow: none; }
+.assessmentReport { display: grid; gap: 16px; color: #221f26; font-family: "IS Coach DejaVu", "DejaVu Sans", sans-serif; }
+.assessmentPage { position: relative; width: 210mm; height: 297mm; padding: 16.2mm 13mm 14mm; overflow: hidden; box-sizing: border-box; background: #fff; box-shadow: 0 18px 60px rgba(0,0,0,.45); font-size: 7.7pt; line-height: 1.24; page: assessment; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+.assessmentCoverPage { padding-top: 14.9mm; }
+.assessmentDataPage { padding: 17.3mm 16.8mm 14mm; }
+.assessmentPhotoPage { padding-top: 15.1mm; }
+.assessmentStripe { position: absolute; inset: 0 0 auto; height: 5mm; background: #321047; }
+.assessmentBrand { height: 27mm; display: flex; align-items: center; gap: 7mm; color: #321047; }
+.assessmentBrand img { width: 20mm; height: 23mm; display: block; object-fit: contain; }
+.assessmentBrand > div { display: grid; gap: 2mm; }
+.assessmentBrand strong { font-size: 21pt; line-height: 1; letter-spacing: .02em; }
+.assessmentBrand span { color: #6d6873; font-size: 8pt; text-transform: uppercase; }
+.assessmentTitle { margin: 2.8mm 2mm 2.8mm; }
+.assessmentTitle h1 { margin: 0; color: #321047; font-size: 21pt; line-height: 1; text-transform: uppercase; }
+.assessmentTitle p { margin: 0; color: #6d6873; font-size: 8pt; }
+.assessmentSection { margin: 0 0 5mm; break-inside: avoid; }
+.assessmentSection > h2 { margin: 0 0 3mm; padding: 3.7mm 6mm 1.9mm; min-height: 10.2mm; box-sizing: border-box; background: #5b2182; color: #fff; font-size: 10.5pt; line-height: 1; text-align: left; text-transform: uppercase; }
+.assessmentInfo { margin: 0 2.2mm; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.3mm 3.5mm; }
+.assessmentInfo > div { min-height: 12mm; padding: 1.6mm 3.5mm; border: .25mm solid #ddd5e2; box-sizing: border-box; }
+.assessmentInfo dt { margin-bottom: 2mm; color: #6d6873; font-size: 6.7pt; text-transform: uppercase; }
+.assessmentInfo dd { margin: 0; font-size: 9pt; font-weight: 700; line-height: 1; overflow-wrap: anywhere; }
+.assessmentSummary { margin: 0 1mm; display: grid; grid-template-columns: repeat(12, 1fr); gap: 4mm 2.5mm; }
+.assessmentSummary > div { grid-column: span 3; min-height: 17mm; padding: 3.2mm 2mm 2mm; box-sizing: border-box; background: #f3ecf8; border: .2mm solid #e9ddf2; text-align: center; }
+.assessmentSummary > div:nth-child(n+5) { grid-column: span 4; }
+.assessmentSummary strong { display: block; color: #321047; font-size: 13.5pt; line-height: 1; }
+.assessmentSummary span { display: block; margin-top: 4mm; color: #6d6873; font-size: 6.7pt; text-transform: uppercase; }
+.reportSummary { margin: 0 1mm; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 2.5mm; }
+.reportSummary > div { min-height: 17mm; padding: 3.2mm 2mm 2mm; box-sizing: border-box; background: #f3ecf8; border: .2mm solid #e9ddf2; text-align: center; }
+.reportSummary strong { display: block; color: #321047; font-size: 13.5pt; line-height: 1; overflow-wrap: anywhere; }
+.reportSummary span { display: block; margin-top: 4mm; color: #6d6873; font-size: 6.7pt; text-transform: uppercase; }
+.designTable { width: 100%; border-collapse: collapse; table-layout: fixed; }
+.designTable th, .designTable td { padding: 1.8mm 3.5mm; border: 0; border-bottom: .2mm solid #ddd5e2; color: #221f26; font-size: 7.7pt; line-height: 1.25; text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+.designTable th { background: #e9ddf2; font-size: 9pt; font-weight: 700; vertical-align: middle; }
+.designTable td a { color: #5b2182; font-weight: 700; }
+.twoColumnTable th:first-child, .twoColumnTable td:first-child { width: 50%; }
+.emptyCell { color: #6d6873 !important; text-align: center !important; }
+.reportMuted { color: #6d6873; font-size: 6.7pt; font-weight: 400; }
+.reportNote { margin: 0 0 3mm; padding: 3mm 4mm; background: #f3ecf8; border: .2mm solid #e9ddf2; color: #221f26; font-size: 7.7pt; white-space: pre-wrap; }
+.reportRecipe { padding: 5mm 6mm; border: .2mm solid #e9ddf2; background: #fff; color: #221f26; font-size: 9pt; line-height: 1.5; white-space: pre-wrap; overflow-wrap: anywhere; }
+.workoutTable th:nth-child(1), .workoutTable td:nth-child(1) { width: 13%; }
+.workoutTable th:nth-child(2), .workoutTable td:nth-child(2) { width: 28%; }
+.workoutTable th:nth-child(3), .workoutTable td:nth-child(3) { width: 7%; }
+.workoutTable th:nth-child(4), .workoutTable td:nth-child(4) { width: 12%; }
+.workoutTable th:nth-child(5), .workoutTable td:nth-child(5) { width: 8%; }
+.workoutTable th:nth-child(6), .workoutTable td:nth-child(6) { width: 9%; }
+.workoutTable th:nth-child(7), .workoutTable td:nth-child(7) { width: 11%; }
+.workoutTable th { padding-right: .8mm; padding-left: .8mm; font-size: 7pt; }
+.workoutTable td { padding-right: 1.2mm; padding-left: 1.2mm; }
+.nutritionTable th:nth-child(1), .nutritionTable td:nth-child(1) { width: 21%; }
+.nutritionTable th:nth-child(2), .nutritionTable td:nth-child(2) { width: 16%; }
+.nutritionTable th:nth-child(3), .nutritionTable td:nth-child(3) { width: 39%; }
+.comparisonTable th:nth-child(1), .comparisonTable td:nth-child(1) { width: 32%; }
+.comparisonTable th:nth-child(n+2), .comparisonTable td:nth-child(n+2) { width: 22.66%; }
+.comparisonPhotosSection > h2 { margin-bottom: 6mm; }
+.comparisonPhotoGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4mm; }
+.comparisonPhotoGrid figure { height: 150mm; margin: 0; padding: 4mm; border: .25mm solid #ddd5e2; box-sizing: border-box; background: #fff; display: flex; flex-direction: column; }
+.comparisonPhotoGrid img { width: 100%; height: 100%; min-height: 0; object-fit: contain; background: #f3ecf8; }
+.comparisonPhotoGrid figcaption { flex: 0 0 auto; margin-top: 4mm; font-size: 9pt; font-weight: 700; }
+.assessmentTable { width: 100%; border-collapse: collapse; table-layout: fixed; }
+.assessmentTable th, .assessmentTable td { padding: 1.4mm 3.5mm; border: 0; border-bottom: .2mm solid #ddd5e2; color: #221f26; font-size: 7.7pt; line-height: 1.15; vertical-align: middle; }
+.assessmentTable th { background: #e9ddf2; font-size: 9pt; text-align: left; }
+.assessmentTable th:first-child, .assessmentTable td:first-child { width: 50%; }
+.assessmentColumns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.5mm; }
+.assessmentColumns .assessmentSection > h2 { margin-bottom: 5.5mm; }
+.assessmentColumns .assessmentSection { margin-bottom: 5.5mm; }
+.assessmentPostureGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.5mm; }
+.assessmentPostureGrid .assessmentSection:last-child:nth-child(odd) { grid-column: 1 / -1; }
+.assessmentPhotosSection > h2 { margin-bottom: 6mm; }
+.assessmentPhotoGrid { margin: 0 1mm; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4mm; }
+.assessmentPhotoGrid figure { height: 103mm; min-width: 0; margin: 0; padding: 3mm; border: .25mm solid #ddd5e2; box-sizing: border-box; background: #f3ecf8; display: flex; flex-direction: column; break-inside: avoid; }
+.assessmentPhotoGrid img { width: 100%; flex: 1; min-height: 0; object-fit: contain; object-position: center; }
+.assessmentPhotoGrid figcaption { flex: 0 0 auto; margin-top: 3mm; font-size: 8.5pt; font-weight: 700; }
+.assessmentPhotoPlaceholder { flex: 1; display: flex; align-items: center; justify-content: center; color: #6d6873; font-size: 6.7pt; line-height: 1.2; text-align: center; text-transform: uppercase; }
+.assessmentSignature { margin-top: 9mm; padding: 5mm 6mm; min-height: 17mm; box-sizing: border-box; background: #f3ecf8; display: grid; align-content: center; font-size: 7.7pt; line-height: 1.2; }
+.assessmentSignature strong, .assessmentSignature span { display: block; }
+.assessmentFooter { position: absolute; inset: auto 15mm 9mm; padding-top: 2.6mm; border-top: .2mm solid #ddd5e2; color: #6d6873; display: flex; justify-content: space-between; font-size: 7pt; }
+@media (max-width: 720px) { .portal { padding: 112px 8px 18px; }.toolbar { flex-wrap: wrap; }.toolbar div { flex: 1 0 100%; }.toolbar button { flex: 1; }.sheet { padding: 7mm; }.header { grid-template-columns: 15mm auto; }.header section { grid-column: 1 / -1; text-align: left; }.logo { width: 14mm; height: 14mm; }.header > div:nth-child(2) strong { font-size: 15pt; }.info { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@page assessment { size: A4 portrait; margin: 0; }
+@media print {
+  @page { size: A4 portrait; margin: 8mm; }
+  :global(body.report-printing) > :global(#root) { display: none !important; }
+  :global(body.report-printing) { background: white !important; }
+  .portal { position: static; overflow: visible; padding: 0; background: white; }
+  .toolbar { display: none !important; }
+  .sheet { width: auto; min-height: 0; margin: 0; padding: 0; box-shadow: none; }
+  .assessmentReport { display: block; }
+  .assessmentPage { box-shadow: none; break-after: page; }
+  .physicalAssessmentReport .assessmentPage { width: 100%; max-width: 190mm; height: 268mm; padding: 10mm 8mm 9mm; margin: 0 auto; page: auto; }
+  .physicalAssessmentReport .assessmentPhotoGrid figure { height: 90mm; }
+  .assessmentPage:last-child { break-after: auto; }
+}
+/* iOS (Safari e demais navegadores WebKit) ignora @page size/margin e imprime com margens próprias.
+   Uma página de altura fixa passa da área útil e o resto vira uma folha em branco.
+   Aqui a altura acompanha o conteúdo e a quebra acontece antes de cada página do relatório. */
+@supports (-webkit-touch-callout: none) {
+  @media print {
+    .assessmentPage, .physicalAssessmentReport .assessmentPage { width: 100%; max-width: none; height: auto; min-height: 236mm; margin: 0; padding: 10mm 8mm 0; overflow: visible; display: flex; flex-direction: column; page: auto; break-after: auto; page-break-after: auto; break-before: page; page-break-before: always; }
+    .assessmentPage:first-child { break-before: auto; page-break-before: auto; }
+    .assessmentFooter { position: static; margin: auto 7mm 0; padding-bottom: 1mm; }
+  }
+}

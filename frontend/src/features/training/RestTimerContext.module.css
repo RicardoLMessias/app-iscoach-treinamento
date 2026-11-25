@@ -1,0 +1,60 @@
+.timer {
+  position: fixed;
+  z-index: 30;
+  left: 50%;
+  bottom: calc(72px + env(safe-area-inset-bottom));
+  transform: translateX(-50%);
+  width: min(calc(100% - 24px), 406px);
+  min-height: 66px;
+  padding: 9px 10px;
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr) 40px;
+  align-items: center;
+  gap: 9px;
+  color: var(--text);
+  background: rgb(18 12 24 / 97%);
+  border: 1px solid #8d35d0;
+  border-radius: 14px;
+  box-shadow: 0 12px 36px rgb(0 0 0 / 55%);
+  backdrop-filter: blur(16px);
+}
+
+.icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  color: var(--purple-light);
+  border: 4px solid #7b28bd;
+  border-right-color: #302338;
+  border-radius: 50%;
+}
+
+.copy { min-width: 0; display: grid; gap: 1px; }
+.copy small { color: #caa8e6; font-size: .75rem; }
+.copy strong { color: #fff; font-size: 1.16rem; line-height: 1.15; }
+.copy span { overflow: hidden; color: var(--text-muted); font-size: .75rem; text-overflow: ellipsis; white-space: nowrap; }
+.timer button { width: 40px; height: 40px; display: grid; place-items: center; color: #dec5f2; background: transparent; border: 0; border-radius: 50%; }
+.finished { background: rgb(38 15 50 / 98%); animation: timer-arrival .32s ease-out; }
+.finished .icon { border-color: #a642ed; background: #48145f; }
+.finished .copy strong { font-size: .875rem; }
+.settings { display: grid; gap: 10px; }
+.settings h2 { margin: 0 0 4px; font-size: 1.1rem; }
+.settings label { font-size: .875rem; font-weight: 700; }
+.settings input[type="range"] { width: 100%; accent-color: var(--purple-light); min-height: 36px; }
+.settings select { width: 100%; min-height: 44px; padding: 9px; color: var(--text); background: #090b0d; border: 1px solid var(--border); border-radius: 8px; }
+.settings button { min-height: 44px; padding: 9px 12px; color: white; background: var(--purple); border: 0; border-radius: 8px; font-weight: 700; }
+.settings small { color: var(--text-muted); line-height: 1.4; }
+
+@keyframes timer-arrival {
+  from { opacity: 0; transform: translate(-50%, 12px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+@media (min-width: 700px) {
+  .timer { bottom: 96px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .finished { animation: none; }
+}
